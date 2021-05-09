@@ -28,6 +28,8 @@ public class RegistrationControl extends HttpServlet {
 
     @EJB
     private RegistrationFacade registrationFacade;
+    
+    private static final long serialVersionUID = 1L;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
@@ -79,7 +81,7 @@ public class RegistrationControl extends HttpServlet {
             } else {
                 // User is already registered
                 // User should re-enter login details or choose forgot password
-                dispatcher = request.getRequestDispatcher("/forgotPasswor.jsp");
+                dispatcher = request.getRequestDispatcher("/forgotPassword.jsp");
                 dispatcher.forward(request, response);
             }
         }

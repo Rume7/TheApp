@@ -10,17 +10,19 @@ import javax.persistence.Id;
  *
  * @author Rhume
  */
-@Entity
+@Entity(name="LoginUser")
 public class Login implements Serializable {
     
+    private static final long serialVersionUID = 1L;
+    
     @Id
-    @Column
+    @Column(name="Email Address")
     private String emailAddress;
     
-    @Column
+    @Column(name="User_ID")
     private String userID;
     
-    @Column
+    @Column(name="Password")
     private String password;
 
     public Login() {
@@ -74,6 +76,6 @@ public class Login implements Serializable {
 
     @Override
     public String toString() {
-        return emailAddress;
+        return "Login = " + this.getEmailAddress();
     }    
 }
