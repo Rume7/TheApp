@@ -1,6 +1,7 @@
 package com.codehacks.login.boundary;
 
 import com.codehacks.login.entity.Login;
+import com.codehacks.register.boundary.AbstractFacade;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
