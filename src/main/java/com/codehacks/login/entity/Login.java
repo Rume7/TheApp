@@ -18,6 +18,9 @@ public class Login implements Serializable {
     private String emailAddress;
     
     @Column
+    private String userID;
+    
+    @Column
     private String password;
 
     public Login() {
@@ -39,6 +42,14 @@ public class Login implements Serializable {
         this.password = password;
     }
 
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -58,16 +69,11 @@ public class Login implements Serializable {
             return false;
         }
         final Login other = (Login) obj;
-        if (!Objects.equals(this.emailAddress, other.emailAddress)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.emailAddress, other.emailAddress);
     }
 
     @Override
     public String toString() {
-        return "Login{" + "emailAddress=" + emailAddress + '}';
-    }
-    
-    
+        return emailAddress;
+    }    
 }

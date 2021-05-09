@@ -16,11 +16,12 @@
         <!-- Registration page for users and managers. -->
         <form action="RegistrationControl" method="Post">
             
-            <input type="email" name="email_address" placeholder="Email Address" required="true" />
-            <input type="password" name="password" placeholder="Password" required="true" />
-            <input type="firstName" name="firstName" placeholder="First Name" required="true" />
-            <input type="lastName" name="lastName" placeholder="Last Name" required="true" />
-            
+            <input type="email" name="email_address" placeholder="Email Address" required="true" /><br /><br />
+            <input type="password" name="password" placeholder="Password" required="true" /><br /><br />
+            <input type="password" name="confirmPassword" placeholder="confirmPassword" required="true" /><br /><br />
+            <input type="firstName" name="firstName" placeholder="First Name" required="true" /><br /><br />
+            <input type="lastName" name="lastName" placeholder="Last Name" required="true" /><br />
+            <input type="text" name="phoneNumber" placeholder="Phone Number" required="true" /><br /><br />
             <input type="submit" name="Submit" />
         </form>
         

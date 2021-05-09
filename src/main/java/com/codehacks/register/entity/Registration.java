@@ -27,6 +27,9 @@ public class Registration implements Serializable {
     private String lastName;    
     
     @Column
+    private String phoneNum;
+    
+    @Column
     private Date timeStamp;    
     
     @Column
@@ -74,6 +77,21 @@ public class Registration implements Serializable {
     public void setTimeStamp(Date timeStamp) {
         this.timeStamp = timeStamp;
     }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
     
+    public String getUserID() {
+        return userID;
+    }
     
+    @Override
+    public String toString() {
+        return "User is: " + this.getUserID();
+    }
 }
