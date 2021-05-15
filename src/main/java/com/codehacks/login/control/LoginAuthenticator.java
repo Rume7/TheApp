@@ -16,18 +16,16 @@ public class LoginAuthenticator {
     public LoginAuthenticator() {}
     
     public boolean authenticate(Login login) {
-        // Use LoginFacade find method to get 
-        // Get Login details from database using email as key
-        // Confirm if the email is same as that from entered
+        // Use LoginFacade find method to get Login details from database using email as key
+        // Confirm if the email is same as that entered
         // if yes, return true;
        
         Login user = loginFacade.find(login.getEmailAddress());
-        return login.getPassword().equals(user.getPassword());           
+        return (login.getPassword()).equals(user.getPassword());           
     }
     
     @Override
     public String toString(){
-        return "Logger verify";
-    }
-    
+        return "Logging verify";
+    }    
 }

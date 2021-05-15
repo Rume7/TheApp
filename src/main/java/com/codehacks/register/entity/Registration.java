@@ -24,21 +24,21 @@ public class Registration implements Serializable {
     @Column
     private String password;
     
-    @Column
+    @Column(name="First_Name")
     private String firstName;
     
-    @Column
+    @Column(name="Last_Name")
     private String lastName;    
     
-    @Column
+    @Column(name="Phone_Number")
     private String phoneNum;
     
     @Column
     @Temporal(value=TemporalType.TIMESTAMP)
-    private Date timeStamp;    
+    private Date dateTimeStamp;    
     
-    @Column
-    private String userID = UserIDGenerator.createUserID();
+    @Column(name="USER_ID")
+    private final String userID = UserIDGenerator.createUserID();
     
     public Registration() {        
     }
@@ -76,11 +76,11 @@ public class Registration implements Serializable {
     }
 
     public Date getTimeStamp() {
-        return timeStamp;
+        return dateTimeStamp;
     }
 
-    public void setTimeStamp(Date timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setTimeStamp(Date dateTimeStamp) {
+        this.dateTimeStamp = dateTimeStamp;
     }
 
     public String getPhoneNum() {

@@ -16,7 +16,7 @@ public class Login implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @Id
-    @Column(name="Email Address")
+    @Column(name="Email_Address")
     private String emailAddress;
     
     @Column(name="User_ID")
@@ -25,8 +25,7 @@ public class Login implements Serializable {
     @Column(name="Password")
     private String password;
 
-    public Login() {
-    }
+    public Login() {}
 
     public String getEmailAddress() {
         return emailAddress;

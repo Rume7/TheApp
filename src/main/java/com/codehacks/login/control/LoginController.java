@@ -21,6 +21,8 @@ public class LoginController extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
 
+        RequestDispatcher dispatcher;
+        
         String emailAddress = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -30,23 +32,29 @@ public class LoginController extends HttpServlet {
 
         // Confirm if user exist in the database
         LoginAuthenticator authenticator = new LoginAuthenticator();
-        boolean state = authenticator.authenticate(login);
-
-        RequestDispatcher dispatcher;
-
+        boolean state = authenticator.authenticate(login);       
+        System.out.println(state);
+        
         // If yes, direct to the complaint page
         if (state) {
             dispatcher = request.getRequestDispatcher("/complainer.jsp");
             dispatcher.forward(request, response);
-        }
+        } else {
 
-        // else, redirect to the login page
-        dispatcher = request.getRequestDispatcher("/login.jsp");
-        dispatcher.forward(request, response);        
+            // else, redirect to the login page
+            dispatcher = request.getRequestDispatcher("/login.jsp");
+            dispatcher.forward(request, response);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }

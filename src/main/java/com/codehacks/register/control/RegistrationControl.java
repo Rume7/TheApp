@@ -6,6 +6,7 @@ import com.codehacks.register.boundary.RegistrationFacade;
 import com.codehacks.register.entity.Registration;
 import com.codehacks.utilities.PasswordHash;
 import java.io.IOException;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
@@ -66,6 +67,7 @@ public class RegistrationControl extends HttpServlet {
                 register.setFirstName(firstName);
                 register.setLastName(lastName);
                 register.setPhoneNum(phoneNum);
+                register.setTimeStamp(new Date());
 
                 // Create login user object 
                 loginUser.setUserID(userID);
