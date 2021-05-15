@@ -39,7 +39,7 @@
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100 p-t-35 p-b-10">
-                    <form class="login100-form validate-form" method="POST" action="Logincontroller">
+                    <form class="login100-form validate-form" method="POST" action="controller">
                         <span class="login100-form-title p-b-40">
                             Welcome
                         </span>
@@ -47,12 +47,12 @@
                             <img src="images/avatar-01.jpg" alt="AVATAR">
                         </span>
 
-                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter Email">
+                        <div class="wrap-input100 validate-input m-t-75 m-b-25" data-validate = "Enter Email">
                             <input class="input100" type="text" name="email">
                             <span class="focus-input100" data-placeholder="Email Address"></span>
                         </div>
 
-                        <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                        <div class="wrap-input100 validate-input m-b-30" data-validate="Enter password">
                             <input class="input100" type="password" name="password">
                             <span class="focus-input100" data-placeholder="Password"></span>
                         </div>
@@ -61,12 +61,6 @@
                             <div class="login100-form-btn">
                                 <input type="submit" name="loginBtn" />
                             </div>
-                            
-                            <!--
-                            <button class="login100-form-btn" name="loginBtn">
-                                Login
-                            </button>
-                            -->
                         </div>
 
                         <ul class="login-more p-t-100">

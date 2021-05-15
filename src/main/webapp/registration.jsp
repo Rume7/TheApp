@@ -39,7 +39,7 @@
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100 p-t-25 p-b-10">
-                    <form class="login100-form validate-form" method="POST" action="RegistrationControl">
+                    <form class="login100-form validate-form" method="POST" action="regcontrol">
                         <span class="login100-form-title p-b-10">
                             Welcome
                         </span>
@@ -78,14 +78,12 @@
                             <div class="login100-form-btn">
                                 <input type="submit" data-placeholder="Register" name="registerBtn" />
                             </div>
-                            
-                            <!--
-                            <button class="login100-form-btn" name="loginBtn">
-                                Login
-                            </button>
-                            -->
+                            <li>
+                                <a href="login.jsp" class="txt2">
+                                    Login to your account
+                                </a>
+                            </li>
                         </div>
-
                     </form>
                 </div>
             </div>
@@ -109,8 +107,6 @@
         <!--===============================================================================================-->
         <script src="vendor/countdowntime/countdowntime.js"></script>
         <!--===============================================================================================-->
-        <script src="js/main.js"></script>
-
-        
+        <script src="js/main.js"></script>        
     </body>
 </html>
