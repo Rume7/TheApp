@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Rhume
  */
-@WebServlet(name = "RegistrationControl", urlPatterns = {"/RegistrationControl"})
+@WebServlet(name = "regcontrol", urlPatterns = {"/regcontrol"})
 public class RegistrationControl extends HttpServlet {
 
     @EJB

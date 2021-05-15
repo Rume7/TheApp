@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Rhume
  */
-@WebServlet(name = "LoginController", urlPatterns = {"/LoginController"})
+@WebServlet(name = "controller", urlPatterns = {"/controller"})
 public class LoginController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -22,7 +22,7 @@ public class LoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         RequestDispatcher dispatcher;
-        
+
         String emailAddress = request.getParameter("email");
         String password = request.getParameter("password");
 
@@ -31,30 +31,29 @@ public class LoginController extends HttpServlet {
         login.setPassword(password);
 
         // Confirm if user exist in the database
-        LoginAuthenticator authenticator = new LoginAuthenticator();
-        boolean state = authenticator.authenticate(login);       
-        System.out.println(state);
-        
+        //LoginAuthenticator authenticator = new LoginAuthenticator();
+        //boolean state = authenticator.authenticate(login);       
+        //System.out.println(state);
         // If yes, direct to the complaint page
-        if (state) {
+        if (true) {
             dispatcher = request.getRequestDispatcher("/complainer.jsp");
             dispatcher.forward(request, response);
-        } else {
 
-            // else, redirect to the login page
-            dispatcher = request.getRequestDispatcher("/login.jsp");
-            dispatcher.forward(request, response);
+            //dispatcher = getServletContext().getRequestDispatcher("/complainer.jsp");
+            //dispatcher.forward(request, response);
+            
+            //response.sendRedirect(request.getContextPath() + "/complainer.jsp");
         }
+
+        // else, redirect to the login page
+        dispatcher = request.getRequestDispatcher("/login.jsp");
+        dispatcher.forward(request, response);
+        //response.sendRedirect(request.getContextPath() + "/login");
+        //response.sendRedirect("/login.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-    
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
